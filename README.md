@@ -59,7 +59,9 @@ A detailed, logical data model for The League Management Sytem  project, incorpo
 
 ![LF drawio](https://github.com/user-attachments/assets/39ed2cf0-ee45-443e-ab9a-7718c032d969)
 
-The logical model provided includes primary and foreign keys, as well as other constraints where applicable.Primary Keys: Match_ID, Team_ID,Player_ID,Season_ID, Stadium_ID,Coach_ID, TeamPlayer_ID,Transfer_IDForeign Keys: FK_MATCH_AWAY_TEAM,FK_MATCH_HOME_TEAM,FK_TEAM_COACH etc.
+The logical model provided includes primary and foreign keys, as well as other constraints where applicable.
+Primary Keys: Match_ID, Team_ID,Player_ID,Season_ID, Stadium_ID,Coach_ID, TeamPlayer_ID,Transfer_ID
+Foreign Keys: FK_MATCH_AWAY_TEAM,FK_MATCH_HOME_TEAM,FK_TEAM_COACH etc.
 
 ## EXPLANATION
 The Logical data model optimizes data storage and retrieval by organizing information into distinct tables with specific relationships, thereby reducing redundancy and enhancing data retrieval efficiency. Each entity, such as Teams, Players, Matches, Seasons, Stadiums, Transfers, and Coaches, has its own table with primary keys for unique identification and foreign keys that establish connections with related tables. For example, the Matches table references Teams, Stadiums, Referees, and Seasons, which prevents duplication of team and stadium details across multiple match records. The Transfers table handles player movements between teams with foreign keys, ensuring that each transfer record accurately links to players and teams involved. This relational approach minimizes data duplication and enables fast queries, as data is retrieved by joining related tables based on indexed keys rather than scanning large, repetitive datasets. By normalizing the design, it maintains data integrity and consistency, making it scalable and efficient for handling large datasets in sports management scenarios
