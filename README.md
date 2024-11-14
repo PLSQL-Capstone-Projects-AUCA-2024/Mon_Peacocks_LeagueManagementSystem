@@ -10,7 +10,6 @@
     - [Prerequisites](#prerequisites)
     - [Install](#install)
     - [Usage](#usage)
-- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -165,23 +164,7 @@ Insert more values .....
 - KUNDWA Nelly: Verified that the logical data model effectively addressed the primary issue outlined in Phase 1, ensuring the model’s alignment with the initial problem statement and objectives.
 - MUGISHA Abdoullatif: Carefully examined the logical data model to ensure that all necessary constraints were applied, enhancing the model’s accuracy and functionality.
 
-## 👥 Authors <a name="authors"></a>
-
-👤 **Nsanzimfura Enock Nkumbuyedeni - 27148**
-
-- GitHub: [@Edenlisk](https://github.com/edenlisk)
-- Twitter: [@Edenlisk](https://twitter.com/nkumbuyedeni)
-
-
-
-👤 **Mutesi Ange de Noëlla - 26599**
-
-- GitHub: [@Noella](https://github.com/DeNoella)
-
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ## 🤝 Contributing <a name="contributing"></a>
