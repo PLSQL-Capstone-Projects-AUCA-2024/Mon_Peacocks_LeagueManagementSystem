@@ -50,12 +50,20 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 This project is currently designed for on-premises use and does not have a live demo.
 Here is ERD (Logical model) for League Management System
+![WhatsApp Image 2024-11-14 at 22 54 03](https://github.com/user-attachments/assets/84bed8d5-1ff0-420e-a434-05fb3cceb602)
+![ERD](https://github.com/user-attachments/assets/5c731a52-9bd8-43fb-8c4a-1130bebeca5d)
 
 
 ### Swimlane
+A detailed, logical data model for The League Management Sytem  project, incorporating all required entities, attributes, and relationships using SQL Developer.
 
 
+![LF drawio](https://github.com/user-attachments/assets/39ed2cf0-ee45-443e-ab9a-7718c032d969)
 
+The logical model provided includes primary and foreign keys, as well as other constraints where applicable.Primary Keys: Match_ID, Team_ID,Player_ID,Season_ID, Stadium_ID,Coach_ID, TeamPlayer_ID,Transfer_IDForeign Keys: FK_MATCH_AWAY_TEAM,FK_MATCH_HOME_TEAM,FK_TEAM_COACH etc.
+
+## EXPLANATION
+The Logical data model optimizes data storage and retrieval by organizing information into distinct tables with specific relationships, thereby reducing redundancy and enhancing data retrieval efficiency. Each entity, such as Teams, Players, Matches, Seasons, Stadiums, Transfers, and Coaches, has its own table with primary keys for unique identification and foreign keys that establish connections with related tables. For example, the Matches table references Teams, Stadiums, Referees, and Seasons, which prevents duplication of team and stadium details across multiple match records. The Transfers table handles player movements between teams with foreign keys, ensuring that each transfer record accurately links to players and teams involved. This relational approach minimizes data duplication and enables fast queries, as data is retrieved by joining related tables based on indexed keys rather than scanning large, repetitive datasets. By normalizing the design, it maintains data integrity and consistency, making it scalable and efficient for handling large datasets in sports management scenarios
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,6 +151,19 @@ Insert more values .....
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## TEAM MEMBER SCOPE DOCUMENTATION
+- MUTESI Ange de Noella: Created and executed SQL commands to insert values, which were instrumental in generating and testing the logical data model within SQL Developer.
+- MAYIMANA Divine: Provided a concise yet informative explanation on how swim lanes operate, detailing their role in organizing and visualizing workflows or processes
+- UWINEZA Liliane: Delivered a comprehensive and detailed description of the logical data model, explaining its structure and how it supports data relationships within the project
+- Cyusa Patrick: I defined the overall scope and boundaries of the swim lane diagram, clarifying the processes it should include and the interactions it should depict.
+- NSANZIMFURA Enock: Wrote the SQL code required to create tables in SQL Developer, ensuring that the database structure aligned with the project’s design and data requirements.
+- KWIZERZA Jean Luc: Drew a swim lane diagram using UML notations, carefully following standardized symbols and conventions to represent different stages and roles within the workflow.
+- Kwizera Mackenzie: Reviewed and confirmed the logical flow within the swim lane diagram, ensuring that each step followed a coherent sequence that accurately represented the intended process.
+- CHIKELUBA Stanley: Identified the key entities necessary for the project, establishing the foundational elements required for an accurate and functional logical data model.
+- KUNDWA Nelly: Verified that the logical data model effectively addressed the primary issue outlined in Phase 1, ensuring the model’s alignment with the initial problem statement and objectives.
+- MUGISHA Abdoullatif: Carefully examined the logical data model to ensure that all necessary constraints were applied, enhancing the model’s accuracy and functionality.
 
 ## 👥 Authors <a name="authors"></a>
 
