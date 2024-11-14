@@ -156,7 +156,7 @@ Insert more values .....
 - MUTESI Ange de Noella: Created and executed SQL commands to insert values, which were instrumental in generating and testing the logical data model within SQL Developer.
 - MAYIMANA Divine: Provided a concise yet informative explanation on how swim lanes operate, detailing their role in organizing and visualizing workflows or processes
 - UWINEZA Liliane: Delivered a comprehensive and detailed description of the logical data model, explaining its structure and how it supports data relationships within the project
-- Cyusa Patrick: I defined the overall scope and boundaries of the swim lane diagram, clarifying the processes it should include and the interactions it should depict.
+- shema Cyusa Patrick: I defined the overall scope and boundaries of the swim lane diagram, clarifying the processes it should include and the interactions it should depict.
 - NSANZIMFURA Enock: Wrote the SQL code required to create tables in SQL Developer, ensuring that the database structure aligned with the project’s design and data requirements.
 - KWIZERZA Jean Luc: Drew a swim lane diagram using UML notations, carefully following standardized symbols and conventions to represent different stages and roles within the workflow.
 - Kwizera Mackenzie: Reviewed and confirmed the logical flow within the swim lane diagram, ensuring that each step followed a coherent sequence that accurately represented the intended process.
