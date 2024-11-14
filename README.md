@@ -60,6 +60,7 @@ A detailed, logical data model for The League Management Sytem  project, incorpo
 ![LF drawio](https://github.com/user-attachments/assets/39ed2cf0-ee45-443e-ab9a-7718c032d969)
 
 The logical model provided includes primary and foreign keys, as well as other constraints where applicable.
+
 Primary Keys: Match_ID, Team_ID,Player_ID,Season_ID, Stadium_ID,Coach_ID, TeamPlayer_ID, Transfer_ID  
 
 Foreign Keys:FK_MATCH_AWAY_TEAM,FK_MATCH_HOME_TEAM,FK_TEAM_COACH etc.
