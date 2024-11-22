@@ -8,4 +8,3 @@ SELECT player_id
 FROM TeamPlayers 
 GROUP BY player_id 
 HAVING COUNT(*) > 1 AND MIN(leave_date) > MAX(join_date);
-
