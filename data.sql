@@ -82,6 +82,7 @@ VALUES (1, 1, TO_DATE('2021-01-01', 'YYYY-MM-DD'), NULL),
        (2, 2, TO_DATE('2020-06-01', 'YYYY-MM-DD'), TO_DATE('2022-06-01', 'YYYY-MM-DD')),
        (3, 3, TO_DATE('2019-09-01', 'YYYY-MM-DD'), NULL);
 
+
 -- Update stadium capacity to reflect renovations
 UPDATE Stadiums SET capacity = 30000 WHERE stadium_name = 'National Stadium';
 
@@ -159,3 +160,48 @@ FROM TeamPlayers
 GROUP BY player_id
 HAVING COUNT(*) > 1
    AND MIN(leave_date) > MAX(join_date);
+
+
+
+-- Tasks: DML and Join Operations (Part 2)
+-- Left Outer Join: Teams and Stadiums
+
+
+SELECT
+    Teams.team_id, Teams.team_name,
+    Stadiums.stadium_name, Stadiums.city
+FROM Teams
+         LEFT OUTER JOIN Stadiums
+                         ON Teams.stadium_id = Stadiums.stadium_id;
+
+
+
+-- Left Outer Join: Matches and Home Teams
+
+SELECT
+    Matches.match_id, Matches.match_date,
+    Teams.team_name AS home_team_name
+FROM Matches
+         LEFT OUTER JOIN Teams
+                         ON Matches.home_team_id = Teams.team_id;
+
+
+-- Right Outer Join: Stadiums and Teams
+
+SELECT
+    Stadiums.stadium_name, Stadiums.city,
+    Teams.team_name
+FROM Teams
+         RIGHT OUTER JOIN Stadiums
+                          ON Teams.stadium_id = Stadiums.stadium_id;
+
+
+
+-- Right Outer Join: Coaches and Teams
+
+SELECT
+    Coaches.first_name, Coaches.last_name,
+    Teams.team_name
+FROM Teams
+         RIGHT OUTER JOIN Coaches
+                          ON Teams.coach_id = Coaches.coach_id;
