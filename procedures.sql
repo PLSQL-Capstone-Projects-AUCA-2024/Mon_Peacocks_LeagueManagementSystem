@@ -1,3 +1,10 @@
+CREATE OR REPLACE PROCEDURE UpdateLeagueChampion(season_id NUMBER, team_id NUMBER) IS
+BEGIN
+    UPDATE LeagueSeasons
+    SET champion_team_id = team_id
+    WHERE season_id = season_id;
+    COMMIT;
+END;
 
 
 BEGIN
@@ -17,7 +24,7 @@ END;
 
 
 
-Procedure: Assign Player to Default Team
+-- Procedure: Assign Player to Default Team
 
 CREATE OR REPLACE PROCEDURE AssignPlayerToDefault(player_id NUMBER) IS
 BEGIN
