@@ -36,6 +36,13 @@ VALUES ('Simon', 'Peter', 'Kenya', 5),
 
 
 -- Insert sample data for league seasons.
+-- Update player position based on new training
+
+UPDATE Players SET position = 'Midfielder' WHERE first_name = 'Alexis' AND last_name = 'Mugabe';
+
+-- Cancel a transfer due to policy violations
+
+DELETE FROM Transfers WHERE transfer_id = 2;
 
 INSERT INTO LeagueSeasons (season_name, start_date, end_date, champion_team_id)
 VALUES ('2023/24 Season', TO_DATE('2023-09-01', 'YYYY-MM-DD'), TO_DATE('2024-05-30', 'YYYY-MM-DD'), 1),
