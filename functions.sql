@@ -52,3 +52,24 @@ SELECT
     AverageMatchScore(season_id) AS avg_score
 FROM LeagueSeasons;
 
+
+
+-- Function: Count Players by Team
+-- Create a function
+CREATE OR REPLACE FUNCTION CountPlayersByTeam(team_id NUMBER)
+RETURN NUMBER IS
+   player_count NUMBER;
+BEGIN
+   SELECT COUNT(*) INTO player_count
+   FROM Players
+   WHERE current_team_id = team_id;
+   RETURN player_count;
+END;
+
+
+-- Query Using Function
+
+SELECT
+   team_name,
+   CountPlayersByTeam(team_id) AS player_count
+FROM Teams;
