@@ -58,7 +58,12 @@ VALUES (1, 1, TO_DATE('2021-01-01', 'YYYY-MM-DD'), NULL),
        (2, 2, TO_DATE('2020-06-01', 'YYYY-MM-DD'), TO_DATE('2022-06-01', 'YYYY-MM-DD')),
        (3, 3, TO_DATE('2019-09-01', 'YYYY-MM-DD'), NULL);
 
+-- Update stadium capacity to reflect renovations
+UPDATE Stadiums SET capacity = 30000 WHERE stadium_name = 'National Stadium';
 
+
+-- Add a new team after league expansion
+INSERT INTO Teams (team_name, founded_year, city, stadium_id, manager, coach_id) VALUES ('New Horizon', 2021, 'Musanze', 1, 'Michael', 2);
 -- Cross Join: Players and Teams
 
 SELECT Players.player_id,
