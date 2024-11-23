@@ -82,8 +82,13 @@ FROM Players
          CROSS JOIN Teams;
 
 -- Test the index on Stadiums(city) with a query
-
 EXPLAIN PLAN FOR SELECT * FROM Stadiums WHERE city = 'Kigali';
+
+
+-- Test queries on matches with composite index
+
+EXPLAIN PLAN FOR SELECT * FROM Matches WHERE home_team_id = 1 AND away_team_id = 2;
+
 
 
 -- Optimize a query using Players(position)
