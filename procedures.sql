@@ -1,10 +1,3 @@
-CREATE OR REPLACE PROCEDURE UpdateLeagueChampion(season_id NUMBER, team_id NUMBER) IS
-BEGIN
-    UPDATE LeagueSeasons
-    SET champion_team_id = team_id
-    WHERE season_id = season_id;
-    COMMIT;
-END;
 
 
 BEGIN
@@ -35,6 +28,27 @@ BEGIN
 END;
 
 
+
+-- Procedure: Assign Default Stadium
+
+CREATE OR REPLACE PROCEDURE AssignDefaultStadium(team_id IN NUMBER) IS
+BEGIN
+UPDATE Teams
+SET stadium_id = (SELECT MIN(stadium_id) FROM Stadiums)
+WHERE team_id = team_id AND stadium_id IS NULL;
+COMMIT;
+END;
+
+
+-- Procedure: Assign Player to Default Team
+
+CREATE OR REPLACE PROCEDURE AssignPlayerToDefault(player_id NUMBER) IS
+BEGIN
+UPDATE Players
+SET current_team_id = (SELECT team_id FROM Teams WHERE team_name = 'Default Team')
+WHERE player_id = player_id AND current_team_id IS NULL;
+COMMIT;
+END;
 -- Procedure to manage player transfer
 CREATE OR REPLACE PROCEDURE transfer_player(
     p_player_id IN NUMBER,
